@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/content_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:background="#5bc8f0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/missiondone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dip"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:text="已完成任务" />
+
+                <TextView
+                    android:id="@+id/missionundo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dip"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:text="待完成任务" />
+
+                <TextView
+                    android:id="@+id/missionrecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dip"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:text="推荐任务" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#5bc8f0" >
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginTop="15dip"
+                    android:singleLine="true"
+                    android:text="工资"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t1"
+                    android:layout_marginLeft="10dip"
+                    android:singleLine="true"
+                    android:text="￥"
+                    android:textColor="#fff"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/gongzi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/t2"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@id/t2"
+                    android:gravity="right|bottom"
+                    android:lineSpacingMultiplier="0.9"
+                    android:singleLine="true"
+                    android:text="184.5"
+                    android:textColor="#fff"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/t2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dip"
+                    android:layout_toRightOf="@id/gongzi"
+                    android:text="元"
+                    android:textColor="#fff"
+                    android:textSize="40sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_below="@id/gongzi"
+                    android:layout_marginTop="15dip"
+                    android:background="#49c4f1" >
+
+                    <TextView
+                        android:id="@+id/gongzimx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:text="工资明细"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tixian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="20dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:text="提取现金"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/mylistview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tuiguang"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_margin="5dip"
+                    android:layout_weight="1.0"
+                    android:background="#8ec22c"
+                    android:gravity="center"
+                    android:text="推广赚钱"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tgmingxi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_margin="5dip"
+                    android:layout_weight="1.0"
+                    android:background="#929626"
+                    android:gravity="center"
+                    android:text="推广明细"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/yaoqing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:text="您的邀请码是K800"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="提示："
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="    手机赚钱中试用的软件均来自第三方平台，强烈建议您下载试用前首先安装手机安全类软件（如：360手机卫士、百度手机卫士、腾讯手机管家）。下载试用软件后如果报毒、报风险，可以立即卸载，更有效地保证自己手机的安全。\n\n    下载、试用软件需要消耗较多流量，强烈建议您在wifi环境下使用，土豪除外。手机赚钱每周不定时更新。"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
